@@ -1,0 +1,16 @@
+input,
+label {
+    width: 99%;
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+label,
+h1 {
+    text-align: center;
+}
+
+input {
+    height: 35px;
+}
