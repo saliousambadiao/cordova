@@ -1,0 +1,7 @@
+.DS_Store
+platforms
+package.json
+config.xml
+package-lock.json
+node_modules
+plugins
