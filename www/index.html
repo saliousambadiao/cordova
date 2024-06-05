@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="lib/themes/jquerythemeroller2.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>IMC Calculator</title>
+  </head>
+
+  <body>
+    <div data-role="header">
+      <h1 id="Welcome">Welcome to IMC Calculator</h1>
+    </div>
+    <form>
+      <fieldset>
+        <legend>Indice de masse corporelle</legend>
+        <label for="poids">Poids (Kg)</label>
+        <input type="number" id="poids" />
+        <label for="taille">Taille (m)</label>
+        <input type="number" id="taille" />
+        <input type="button" value="Calculate" onclick="calculerImc()" />
+      </fieldset>
+      <fieldset hidden>
+        <legend>Interprétation</legend>
+        <label id="interpretation"></label>
+      </fieldset>
+    </form>
+    <div data-role="footer" data-position="fixed">
+      <h1>Saliou Samba DIAO DIC3 &copy; 2024</h1>
+    </div>
+  </body>
+</html>
