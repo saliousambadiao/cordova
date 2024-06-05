@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(listItem).on("swiperight", function() {
                 removeTask(this);
             });
+
+            toggleReinitialiserButton();
         }
     }
 
@@ -66,14 +68,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const completedList = document.getElementById('completedTacheList');
         completedList.appendChild(taskItem);
         $(taskItem).off("swiperight swipeleft");
+
+        toggleReinitialiserButton();
     }
 
     function removeTask(taskItem) {
         taskItem.remove();
+
+        toggleReinitialiserButton();
+    }
+
+    function reinitialiserTaches() {
+        const tacheList = document.getElementById('tacheList');
+        const tacheTermineeList = document.getElementById('completedTacheList');
+        tacheList.innerHTML = '';
+        tacheTermineeList.innerHTML = '';
+
+        toggleReinitialiserButton();
+    }
+
+    function toggleReinitialiserButton() {
+        const tacheList = document.getElementById('tacheList');
+        const tacheTermineeList = document.getElementById('completedTacheList');
+        const btnReinitialiser = document.getElementById('btnReinitialiser');
+        
+        if (tacheList.children.length > 0 || tacheTermineeList.children.length > 0) {
+            btnReinitialiser.style.display = 'inline-block';
+        } else {
+            btnReinitialiser.style.display = 'none';
+        }
     }
 
     // Expose functions to the global scope
     window.ajouterTache = ajouterTache;
     window.handleInputChange = handleInputChange;
     window.ajouterTacheALaListe = ajouterTacheALaListe;
+    window.reinitialiserTaches = reinitialiserTaches;
+    window.toggleReinitialiserButton = toggleReinitialiserButton;
 });

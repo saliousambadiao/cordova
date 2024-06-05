@@ -79,3 +79,11 @@ li {
   border-radius: 4px;
   cursor: pointer;
 }
+
+button.reinitialiser {
+  background-color: #dc3545; /* Background color for "Réinitialiser" button */
+}
+
+button.reinitialiser:hover {
+  background-color: #c82333; /* Hover color for "Réinitialiser" button */
+}
