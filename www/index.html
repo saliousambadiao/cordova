@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="lib/themes/jquerythemeroller2.css" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>ToDoListApp</title>
+  </head>
+  <body>
+    <div data-role="header"><h1>Welcome to ToDoListApp</h1></div>
+    <div class="app">
+      <button class="todo ajouter" onclick="ajouterTache()">
+        Ajouter une tache
+      </button>
+      <div id="ajoutTache"></div>
+      <h2 id="listTache">Liste des taches en cours</h2>
+      <ul id="tacheList"></ul>
+      <h2 id="completedTache">Liste des taches terminées</h2>
+      <ul id="completedTacheList"></ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h1>Saliou Samba DIAO DIC3 &copy; 2024</h1>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
